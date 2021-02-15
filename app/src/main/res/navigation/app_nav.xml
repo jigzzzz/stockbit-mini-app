@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/app_nav">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/app_nav"
+    app:startDestination="@id/watchlistFragment">
+    <fragment
+        android:id="@+id/watchlistFragment"
+        android:name="com.exercise.ministockbitapp.ui.watchlist.WatchlistFragment"
+        android:label="WatchlistFragment" />
 </navigation>

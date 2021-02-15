@@ -46,21 +46,21 @@ class LoginActivity : AppCompatActivity() {
         binding.btnLogin.setOnClickListener {
             startActivity(MainActivity.getIntent(this))
         }
-        binding.btnFacebookLogin.setOnClickListener {
-            creatingToast("This feature is still under maintenance")
-        }
-        binding.btnGoogleLogin.setOnClickListener {
-            creatingToast("This feature is still under maintenance")
-        }
-        binding.btnLoginWithFingerprint.setOnClickListener {
-            creatingToast("This feature is still under maintenance")
-        }
-        binding.textForgotPassword.setOnClickListener {
-            creatingToast("This feature is still under maintenance")
-        }
-        binding.btnRegister.setOnClickListener {
-            creatingToast("Please call our customer service to register your account")
-        }
+//        binding.btnFacebookLogin.setOnClickListener {
+//            creatingToast("This feature is still under maintenance")
+//        }
+//        binding.btnGoogleLogin.setOnClickListener {
+//            creatingToast("This feature is still under maintenance")
+//        }
+//        binding.btnLoginWithFingerprint.setOnClickListener {
+//            creatingToast("This feature is still under maintenance")
+//        }
+//        binding.textForgotPassword.setOnClickListener {
+//            creatingToast("This feature is still under maintenance")
+//        }
+//        binding.btnRegister.setOnClickListener {
+//            creatingToast("Please call our customer service to register your account")
+//        }
 //        showHidePassword()
     }
 

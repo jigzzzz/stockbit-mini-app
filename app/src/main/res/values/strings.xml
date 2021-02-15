@@ -11,4 +11,8 @@
     <string name="login_with_fingerprint">Masuk dengan Fingerprint</string>
     <string name="ask_create_account">Belum punya akun?</string>
     <string name="register">Daftar sekarang</string>
+    <string name="watchlist">Watchlist</string>
+    <string name="search">Search</string>
+    <string name="chat">Chat</string>
+    <string name="all_watchlist">All Watchlist</string>
 </resources>

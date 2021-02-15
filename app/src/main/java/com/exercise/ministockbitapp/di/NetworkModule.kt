@@ -1,5 +1,6 @@
 package com.exercise.ministockbitapp.di
 
+import com.exercise.ministockbitapp.BuildConfig
 import okhttp3.OkHttpClient
 import org.koin.dsl.module
 import retrofit2.Retrofit
@@ -13,7 +14,7 @@ val networkModule = module {
         .build()
     fun provideGson() = GsonConverterFactory.create()
     fun provideRetrofit(gson: GsonConverterFactory, client: OkHttpClient) = Retrofit.Builder()
-        .baseUrl("")
+        .baseUrl(BuildConfig.BASE_URL)
         .addConverterFactory(gson)
         .client(client)
         .build()
