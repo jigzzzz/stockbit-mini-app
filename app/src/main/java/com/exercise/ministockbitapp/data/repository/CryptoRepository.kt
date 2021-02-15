@@ -16,8 +16,8 @@ import com.exercise.ministockbitapp.data.dto.Coin as CoinDTO
 
 class CryptoRepository(private val api: CryptoService) {
 
-    fun findAllWatchlist() : LiveData<List<Coin>> {
-        val watchlist: MutableLiveData<List<Coin>> = MutableLiveData()
+    fun findAllWatchlist() : LiveData<List<CoinDTO>> {
+        val watchlist: MutableLiveData<List<CoinDTO>> = MutableLiveData()
         api.findAllWatchlist().enqueue(
             object : Callback<CoinResponse<CoinDTO>> {
                 override fun onFailure(
@@ -31,9 +31,9 @@ class CryptoRepository(private val api: CryptoService) {
                     call: Call<CoinResponse<com.exercise.ministockbitapp.data.dto.Coin>>,
                     response: Response<CoinResponse<com.exercise.ministockbitapp.data.dto.Coin>>
                 ) {
-                    Log.d("<DEBUG>", response.toString())
-                    val result = Coin.convertFromResponse(response.body()!!.result)
-                    watchlist.postValue(result)
+                    if(response.isSuccessful) {
+                        watchlist.postValue(response.body()!!.result)
+                    }
                 }
             }
         )

@@ -6,7 +6,7 @@ data class Coin(
         @SerializedName("CoinInfo")
         val coinInfo: CoinInfo,
         @SerializedName("RAW")
-        val coinRawPrice: CoinRawPrice,
+        val coinRawPrice: Currency<CoinRawPrice>,
         @SerializedName("DISPLAY")
-        val coinDisplayPrice: CoinDisplayPrice
+        val coinDisplayPrice: Currency<CoinDisplayPrice>
 )

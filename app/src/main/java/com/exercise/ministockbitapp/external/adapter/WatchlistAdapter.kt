@@ -1,5 +1,6 @@
 package com.exercise.ministockbitapp.external.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -12,6 +13,7 @@ class WatchlistAdapter : RecyclerView.Adapter<WatchlistAdapter.ViewHolder>() {
 
     inner class ViewHolder(private val binding: LayoutCryptoItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(coin: Coin) {
+            binding.coin = coin
             if (coin.isPriceUp)
                 binding.tvPercentage.setTextColor(binding.root.context.getColor(android.R.color.holo_green_dark))
             else

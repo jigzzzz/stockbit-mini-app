@@ -18,6 +18,7 @@ class WatchlistFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        watchlistViewModel.loadWatchlist()
     }
 
     override fun onCreateView(
