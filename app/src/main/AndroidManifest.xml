@@ -13,6 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MiniStockbitApp">
         <activity android:name=".ui.MainActivity">
+        </activity>
+        <activity android:name=".ui.login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
